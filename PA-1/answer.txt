@@ -1,0 +1,16 @@
+Size of File (mb)	Executing Time (s)
+1	0.39
+5	0.899
+10	1.23
+20	2.105
+50	5.008
+75	7.013
+100	9.229
+200	19.243
+
+1. Yes, this trend makes sense. On a graph, this line was very linear with little variance.
+This also makes sense with the amount of times we will have to transfer over data. I set the maximum message as 256 bytes 
+so it would take more messages to transfer the total file. More iterations which lead to more time. 
+
+2. The main bottleneck is the small message size (256 bytes), which forces the client and server to perform hundreds of round trips for large files.
+This causes alot of context switching which slows down the transfer more than the raw file.
